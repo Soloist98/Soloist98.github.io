@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>最后的回忆</title>
+    <title>最后的回忆(未完待续)</title>
     <url>/2021/05/08/memo/memo/</url>
     <content><![CDATA[<h1 id="pieces-of-memory，pieces-of-my-memory"><a href="#pieces-of-memory，pieces-of-my-memory" class="headerlink" title="pieces of memory，pieces of my memory"></a>pieces of memory，pieces of my memory</h1><p>This place is so empty,<br>My thoughts are so tempting,<br>I don’t know how we got so bad,<br>Sometimes it’s so crazy that nothing could save me,<br>But it’s the only thing that I have,<br>If you believe it’s in my soul,<br>I’d say all the words that I know,<br>Just to see if it would show,<br>that I’m trying to let you know,<br>That I’m better off on my own. </p>
 <p>至少到最后在我心中还有个尚未崩坏的地方，把我所有的回忆隐藏起来。</p>
@@ -45,30 +45,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>java</title>
-    <url>/2021/01/29/java/java/</url>
-    <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">B()...</span><br><span class="line">A</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-
-<p>源码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElse</span><span class="params">(T other)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElseGet</span><span class="params">(Supplier&lt;? extends T&gt; other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>ofNullable返回值相等</p>
-<ul>
-<li>ofNullable不管是不是null，orElse或者orElseGet一定会调用，B()一定会执行，但是lambda只会在null时才会执行。</li>
-</ul>
-<p>orElse参数是泛型T类型的值，orELseGet则为lambda。</p>
-<p>所以两者null时情形差不多，非null时希望后面执行则orElse，否则orElseGet</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>k8s学习</title>
     <url>/2021/04/05/tool/k8s/</url>
     <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><h2 id="1-1-Pod"><a href="#1-1-Pod" class="headerlink" title="1.1 Pod"></a>1.1 Pod</h2><ol>
@@ -91,6 +67,30 @@
       </categories>
       <tags>
         <tag>k8s</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java</title>
+    <url>/2021/01/29/java/java/</url>
+    <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">B()...</span><br><span class="line">A</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+
+<p>源码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElse</span><span class="params">(T other)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElseGet</span><span class="params">(Supplier&lt;? extends T&gt; other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ofNullable返回值相等</p>
+<ul>
+<li>ofNullable不管是不是null，orElse或者orElseGet一定会调用，B()一定会执行，但是lambda只会在null时才会执行。</li>
+</ul>
+<p>orElse参数是泛型T类型的值，orELseGet则为lambda。</p>
+<p>所以两者null时情形差不多，非null时希望后面执行则orElse，否则orElseGet</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>

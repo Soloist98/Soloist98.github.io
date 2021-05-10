@@ -19,58 +19,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>java</title>
-    <url>/2021/01/29/java/java/</url>
-    <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">B()...</span><br><span class="line">A</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-
-<p>源码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElse</span><span class="params">(T other)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElseGet</span><span class="params">(Supplier&lt;? extends T&gt; other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>ofNullable返回值相等</p>
-<ul>
-<li>ofNullable不管是不是null，orElse或者orElseGet一定会调用，B()一定会执行，但是lambda只会在null时才会执行。</li>
-</ul>
-<p>orElse参数是泛型T类型的值，orELseGet则为lambda。</p>
-<p>所以两者null时情形差不多，非null时希望后面执行则orElse，否则orElseGet</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>排序算法</title>
-    <url>/2021/04/18/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="1-快排"><a href="#1-快排" class="headerlink" title="1. 快排"></a>1. 快排</h2><p><a href="https://leetcode-cn.com/problems/sort-an-array/">Leet-code-912-排序数组</a></p>
-<p>本文主要参考《算法导论》快排实现方式。</p>
-<ol>
-<li><p>整体框架</p>
-<p>整体思路是<strong>分治+递归</strong>。选出基准值<strong>pivot</strong>，将数组分组基准值左侧小于基准值，右侧大于基准值。将两边分组递归排序。</p>
-<p>代码框架如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (beginIdx &lt; endIdx) &#123;</span><br><span class="line">        <span class="keyword">int</span> pivot = partition(nums, beginIdx, endIdx);</span><br><span class="line">        quickSort(nums, beginIdx, pivot - <span class="number">1</span>);</span><br><span class="line">        quickSort(nums, pivot + <span class="number">1</span>, endIdx);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分组细节</p>
-<p>默认选择最后一个作为基准值。</p>
-<ol>
-<li><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivot = nums[endIdx];</span><br><span class="line">    <span class="keyword">int</span> i = beginIdx - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = beginIdx; j &lt; endIdx; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[j] &lt;= pivot) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">            nums[i] = nums[j];</span><br><span class="line">            nums[j] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    nums[endIdx] = nums[i + <span class="number">1</span>];</span><br><span class="line">    nums[i + <span class="number">1</span>] = pivot;</span><br><span class="line">    <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>最后的回忆(未完待续)</title>
     <url>/2021/05/08/memo/memo/</url>
     <content><![CDATA[<h1 id="pieces-of-memory，pieces-of-my-memory"><a href="#pieces-of-memory，pieces-of-my-memory" class="headerlink" title="pieces of memory，pieces of my memory"></a>pieces of memory，pieces of my memory</h1><p>This place is so empty,<br>My thoughts are so tempting,<br>I don’t know how we got so bad,<br>Sometimes it’s so crazy that nothing could save me,<br>But it’s the only thing that I have,<br>If you believe it’s in my soul,<br>I’d say all the words that I know,<br>Just to see if it would show,<br>that I’m trying to let you know,<br>That I’m better off on my own. </p>
@@ -103,7 +51,21 @@
 <p>​        其实我知道你真正的意思，但是我想该做的事我会做的很认真的该准备我都会准备的，我也希望能做一些让你父母开心，可我听到这话就感觉像是像是一种条件，一种金钱交换，一种威胁，我讨厌这种金钱的东西我觉得很世俗。我不开心，我开始对你隐形攻击，我说你父母就知道谈钱，我通过这种方式去表达了我的不开心，触碰到了你敏感的地方。如果你说让我包个红包，让你父母开心下，你父母也再给我包个红包，大家都开心，这样表达是不是更加成熟呢，而我如果好好的向你表达我的情绪我的感受，用另一种方式表达我的不开心，是不是也更加成熟。我想我们都做的不够好，我一直不太会表达我内心的情感，我很少向被人倾述感情，连你也是，<strong>如何用温和的方式相处，我始终做的不够好</strong>。</p>
 <p>​        医生说可能是我从小被父母管教的很严格，习惯性的压抑住自己情绪，故意带刺反抗，习惯用这种方式去发泄自己情绪。我想你也不了解我，你也没有经历过我的经历，我们都无法感同身受，你可能也只是了解你以为的我，就连我好像也才渐渐的去剖析了解自我。</p>
 <p>​        最后医生劝我不要陷入自责的情绪，陷在情绪里，怀疑自己，无法好好思考做好自己。希望如此。</p>
-]]></content>
+<h2 id="2021-05-10"><a href="#2021-05-10" class="headerlink" title="2021-05-10"></a>2021-05-10</h2><blockquote>
+<p>是你给我一个梦，不计人生的苦涩。</p>
+<p>是你放我一个人，走过风雨的思念。</p>
+<p>真正想要对你讲，心中无别人。</p>
+<p>——《心中无别人》</p>
+</blockquote>
+<p>我好想你，好想和你聊聊天。哪怕仅仅是通过微信朋友验证。我努力克制着内心的情绪波动，我不想自己显得那么卑微，在你离开之后。我甚至怕打扰到你，让你更加讨厌我。</p>
+<img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210510232752807.png" alt="image-20210510232752807" style="zoom: 33%;" />
+
+<p>今天看到一段话</p>
+<blockquote>
+<p>在一起相互成长总是好的，但是要等一个人长大的代价太大了。</p>
+</blockquote>
+<p>就到这里吧。</p>
+<h3 id="End-of-Story-End-of-Her-Story-Begin-of-His-Stroty"><a href="#End-of-Story-End-of-Her-Story-Begin-of-His-Stroty" class="headerlink" title="End of Story. End of Her Story. Begin of His Stroty"></a>End of Story. End of Her Story. Begin of His Stroty</h3>]]></content>
       <categories>
         <category>memo</category>
       </categories>
@@ -111,6 +73,30 @@
         <tag>随笔</tag>
         <tag>关于我爱你</tag>
         <tag>所有的回忆</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java</title>
+    <url>/2021/01/29/java/java/</url>
+    <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">B()...</span><br><span class="line">A</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+
+<p>源码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElse</span><span class="params">(T other)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElseGet</span><span class="params">(Supplier&lt;? extends T&gt; other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ofNullable返回值相等</p>
+<ul>
+<li>ofNullable不管是不是null，orElse或者orElseGet一定会调用，B()一定会执行，但是lambda只会在null时才会执行。</li>
+</ul>
+<p>orElse参数是泛型T类型的值，orELseGet则为lambda。</p>
+<p>所以两者null时情形差不多，非null时希望后面执行则orElse，否则orElseGet</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -136,6 +122,34 @@
       </categories>
       <tags>
         <tag>k8s</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>排序算法</title>
+    <url>/2021/04/18/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="1-快排"><a href="#1-快排" class="headerlink" title="1. 快排"></a>1. 快排</h2><p><a href="https://leetcode-cn.com/problems/sort-an-array/">Leet-code-912-排序数组</a></p>
+<p>本文主要参考《算法导论》快排实现方式。</p>
+<ol>
+<li><p>整体框架</p>
+<p>整体思路是<strong>分治+递归</strong>。选出基准值<strong>pivot</strong>，将数组分组基准值左侧小于基准值，右侧大于基准值。将两边分组递归排序。</p>
+<p>代码框架如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (beginIdx &lt; endIdx) &#123;</span><br><span class="line">        <span class="keyword">int</span> pivot = partition(nums, beginIdx, endIdx);</span><br><span class="line">        quickSort(nums, beginIdx, pivot - <span class="number">1</span>);</span><br><span class="line">        quickSort(nums, pivot + <span class="number">1</span>, endIdx);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分组细节</p>
+<p>默认选择最后一个作为基准值。</p>
+<ol>
+<li><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivot = nums[endIdx];</span><br><span class="line">    <span class="keyword">int</span> i = beginIdx - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = beginIdx; j &lt; endIdx; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[j] &lt;= pivot) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">            nums[i] = nums[j];</span><br><span class="line">            nums[j] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    nums[endIdx] = nums[i + <span class="number">1</span>];</span><br><span class="line">    nums[i + <span class="number">1</span>] = pivot;</span><br><span class="line">    <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
       </tags>
   </entry>
 </search>

@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>k8s学习</title>
+    <url>/2021/04/05/tool/k8s/</url>
+    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><h2 id="1-1-Pod"><a href="#1-1-Pod" class="headerlink" title="1.1 Pod"></a>1.1 Pod</h2><ol>
+<li>一个pod包含多个容器(sideCar模式)</li>
+<li>Pod控制器——Deployment</li>
+</ol>
+<h2 id="1-2-Name"><a href="#1-2-Name" class="headerlink" title="1.2 Name"></a>1.2 Name</h2><ul>
+<li>name</li>
+<li>namespace</li>
+</ul>
+<h2 id="1-3-Label"><a href="#1-3-Label" class="headerlink" title="1.3 Label"></a>1.3 Label</h2><ul>
+<li>label</li>
+<li>label选择器</li>
+</ul>
+<h2 id="1-4-Service-Ingress"><a href="#1-4-Service-Ingress" class="headerlink" title="1.4 Service Ingress"></a>1.4 Service Ingress</h2><p>问题：Pod ip地址 变化</p>
+<h1 id="2-核心组件"><a href="#2-核心组件" class="headerlink" title="2. 核心组件"></a>2. 核心组件</h1><h2 id="2-1-etcd—配置存储中心"><a href="#2-1-etcd—配置存储中心" class="headerlink" title="2.1 etcd—配置存储中心"></a>2.1 etcd—配置存储中心</h2><h2 id="2-2-主控-master-节点"><a href="#2-2-主控-master-节点" class="headerlink" title="2.2 主控(master)节点"></a>2.2 主控(master)节点</h2><h2 id="2-3-运算-node-节点"><a href="#2-3-运算-node-节点" class="headerlink" title="2.3 运算(node)节点"></a>2.3 运算(node)节点</h2><h2 id="2-4-核心客户端"><a href="#2-4-核心客户端" class="headerlink" title="2.4 核心客户端"></a>2.4 核心客户端</h2>]]></content>
+      <categories>
+        <category>tool</category>
+        <category>k8s</category>
+      </categories>
+      <tags>
+        <tag>k8s</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/11/29/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -57,7 +82,7 @@
 <p>真正想要对你讲，心中无别人。</p>
 <p>——《心中无别人》</p>
 </blockquote>
-<p>我好想你，好想和你聊聊天。哪怕仅仅是通过微信朋友验证。我努力克制着内心的情绪波动，我不想自己显得那么卑微，在你离开之后。我甚至怕打扰到你，让你更加讨厌我。</p>
+<p>我好想你，好想和你聊聊天。哪怕仅仅是通过微信朋友验证。我努力克制着内心的情绪波动，我不想自己显得那么卑微，特别是在你离开之后。我甚至怕打扰到你，让你更加讨厌我。</p>
 <img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210510232752807.png" alt="image-20210510232752807" style="zoom: 33%;" />
 
 <p>今天看到一段话</p>
@@ -65,7 +90,7 @@
 <p>在一起相互成长总是好的，但是要等一个人长大的代价太大了。</p>
 </blockquote>
 <p>就到这里吧。</p>
-<h3 id="End-of-Story-End-of-Her-Story-Begin-of-His-Stroty"><a href="#End-of-Story-End-of-Her-Story-Begin-of-His-Stroty" class="headerlink" title="End of Story. End of Her Story. Begin of His Stroty"></a>End of Story. End of Her Story. Begin of His Stroty</h3>]]></content>
+<h3 id="End-of-Story-End-of-Her-Story-Begin-of-His-Story"><a href="#End-of-Story-End-of-Her-Story-Begin-of-His-Story" class="headerlink" title="End of Story. End of Her Story. Begin of His Story"></a>End of Story. End of Her Story. Begin of His Story</h3>]]></content>
       <categories>
         <category>memo</category>
       </categories>
@@ -73,55 +98,6 @@
         <tag>随笔</tag>
         <tag>关于我爱你</tag>
         <tag>所有的回忆</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java</title>
-    <url>/2021/01/29/java/java/</url>
-    <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">B()...</span><br><span class="line">A</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-
-<p>源码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElse</span><span class="params">(T other)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElseGet</span><span class="params">(Supplier&lt;? extends T&gt; other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>ofNullable返回值相等</p>
-<ul>
-<li>ofNullable不管是不是null，orElse或者orElseGet一定会调用，B()一定会执行，但是lambda只会在null时才会执行。</li>
-</ul>
-<p>orElse参数是泛型T类型的值，orELseGet则为lambda。</p>
-<p>所以两者null时情形差不多，非null时希望后面执行则orElse，否则orElseGet</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>k8s学习</title>
-    <url>/2021/04/05/tool/k8s/</url>
-    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><h2 id="1-1-Pod"><a href="#1-1-Pod" class="headerlink" title="1.1 Pod"></a>1.1 Pod</h2><ol>
-<li>一个pod包含多个容器(sideCar模式)</li>
-<li>Pod控制器——Deployment</li>
-</ol>
-<h2 id="1-2-Name"><a href="#1-2-Name" class="headerlink" title="1.2 Name"></a>1.2 Name</h2><ul>
-<li>name</li>
-<li>namespace</li>
-</ul>
-<h2 id="1-3-Label"><a href="#1-3-Label" class="headerlink" title="1.3 Label"></a>1.3 Label</h2><ul>
-<li>label</li>
-<li>label选择器</li>
-</ul>
-<h2 id="1-4-Service-Ingress"><a href="#1-4-Service-Ingress" class="headerlink" title="1.4 Service Ingress"></a>1.4 Service Ingress</h2><p>问题：Pod ip地址 变化</p>
-<h1 id="2-核心组件"><a href="#2-核心组件" class="headerlink" title="2. 核心组件"></a>2. 核心组件</h1><h2 id="2-1-etcd—配置存储中心"><a href="#2-1-etcd—配置存储中心" class="headerlink" title="2.1 etcd—配置存储中心"></a>2.1 etcd—配置存储中心</h2><h2 id="2-2-主控-master-节点"><a href="#2-2-主控-master-节点" class="headerlink" title="2.2 主控(master)节点"></a>2.2 主控(master)节点</h2><h2 id="2-3-运算-node-节点"><a href="#2-3-运算-node-节点" class="headerlink" title="2.3 运算(node)节点"></a>2.3 运算(node)节点</h2><h2 id="2-4-核心客户端"><a href="#2-4-核心客户端" class="headerlink" title="2.4 核心客户端"></a>2.4 核心客户端</h2>]]></content>
-      <categories>
-        <category>tool</category>
-        <category>k8s</category>
-      </categories>
-      <tags>
-        <tag>k8s</tag>
       </tags>
   </entry>
   <entry>
@@ -150,6 +126,30 @@
       </categories>
       <tags>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java</title>
+    <url>/2021/01/29/java/java/</url>
+    <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">B()...</span><br><span class="line">A</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+
+<p>源码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElse</span><span class="params">(T other)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElseGet</span><span class="params">(Supplier&lt;? extends T&gt; other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ofNullable返回值相等</p>
+<ul>
+<li>ofNullable不管是不是null，orElse或者orElseGet一定会调用，B()一定会执行，但是lambda只会在null时才会执行。</li>
+</ul>
+<p>orElse参数是泛型T类型的值，orELseGet则为lambda。</p>
+<p>所以两者null时情形差不多，非null时希望后面执行则orElse，否则orElseGet</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
       </tags>
   </entry>
 </search>

@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/11/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>java</title>
     <url>/2021/01/29/java/java/</url>
     <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -22,83 +40,6 @@
       </categories>
       <tags>
         <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/11/29/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>最后的回忆(未完待续)</title>
-    <url>/2021/05/08/memo/memo/</url>
-    <content><![CDATA[<h1 id="pieces-of-memory，pieces-of-my-memory"><a href="#pieces-of-memory，pieces-of-my-memory" class="headerlink" title="pieces of memory，pieces of my memory"></a>pieces of memory，pieces of my memory</h1><p>This place is so empty,<br>My thoughts are so tempting,<br>I don’t know how we got so bad,<br>Sometimes it’s so crazy that nothing could save me,<br>But it’s the only thing that I have,<br>If you believe it’s in my soul,<br>I’d say all the words that I know,<br>Just to see if it would show,<br>that I’m trying to let you know,<br>That I’m better off on my own. </p>
-<p>至少到最后在我心中还有个尚未崩坏的地方，把我所有的回忆隐藏起来。</p>
-<p>怕这些记忆慢慢忘记，这样至少自己能帮自己回忆。</p>
-<a id="more"></a>
-
-<h2 id="2018-05-20"><a href="#2018-05-20" class="headerlink" title="2018-05-20"></a>2018-05-20</h2><p>一切故事的起点。</p>
-<img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210507232527944.png" alt="image-20210507232527944" style="zoom: 25%;" />
-
-<p>单纯的孩子，爬上了殿堂。</p>
-<p>​        那个喧闹而又寂静的夏天，如常一样躲进电子楼。收到你的消息后我在想不会要送我个对象吧，一切美好都在那一刻来的恰到好处，亚当和夏娃闯进了伊甸园偷尝了爱情的禁果，谁也没想到后来的事。但至少在那一天在那一刻我是开心的，神的孩子在伊甸园里跳起了舞。</p>
-<p>​        难过的时候就想去看大海，开心的时候也是如此，所有的开心与不开心都可以抛给大海，海浪声淹没了一切。走到海边，写下了我爱你，写给海那边的你，浪花卷走了所有的情绪，你给的爱像温柔海浪，<strong><em>你是彼粒星，飞过我的天顶。</em></strong></p>
-<img src="https://gitee.com/soloist98/blogimage/raw/master/img/232d26e2fee4277a129fd10e56f64be.jpg" alt="232d26e2fee4277a129fd10e56f64be" style="zoom: 33%;" />
-
-<p>​        喧闹的夜晚，RNG夺冠了，宿舍充满了吵闹声，这一切热闹都与我无关了，对我而言那时候的世界是那么的寂静，寂静到只有我和你两人，我心里的世界只有你，按捺不住的情绪，悄悄躲在了无人的角落，给你打了第一通电话，那是一切故事的开始。</p>
-<h2 id="2021-05-08"><a href="#2021-05-08" class="headerlink" title="2021-05-08"></a>2021-05-08</h2><p>今天约了情感咨询，趁着记忆写点什么。</p>
-<blockquote>
-<p>医生：你有想过如果重新在一起你要怎么变得更好吗？你们要怎样才能更加了解彼此？</p>
-<p>医生：你喜欢她什么？她身上有什么闪光点值得你去喜欢？</p>
-</blockquote>
-<p>这两个问题我犹豫了很久都没有回答上来。</p>
-<p>​         我想的都是我想要复合，每次分手我都竭尽全力想去复合，想的是复合后去好好爱你，但是从来没想明白过要怎么去做才能变更好，才能去更了解你或是让你更了解我，我说我要好好的和你沟通交流，但是说出口后又觉得这是好苍白无力虚无缥缈的方式。</p>
-<p>​         我喜欢你什么呢？相貌？身体？我想说但我又觉得不是这些，我喜欢有你陪伴，我喜欢那些和你一起的美好的回忆，我被爱了我就想好好爱你，我喜欢那些我们真心付出过的感情。医生和朋友都说你更成熟，在感情中给予了我更多的爱，是啊，如医生说的我喜欢的是被爱的感觉，忘了何时我就明白了我喜欢的是被爱的感觉，我当时也明白了其实在这段感情中我应该付出更多的爱，而不是一直要求被爱，可我又全给忘记了，到最后我一直要求你给我买鞋也想要再次感受到被爱。</p>
-<p>​          医生说争吵是无法避免的，但是要通过争吵去变得更好，去更了解对方，我们有不同的人生经历，我们无法感同身受，可是正如你说的我们每次争吵并没有更了解对方，而是通过逃避问题为了那一点快乐，去隐藏了自己。</p>
-<p>​          和医生聊了分手的导火索，她说你是个更加敏感的人，更需要被呵护，更需要我去小心翼翼的相处不要触碰到你最敏感的地方。我们时常拿对方开玩笑打趣，但是这些玩笑都是带了<strong>隐形攻击</strong>的，而没有直接想对方袒露自己的内心情感，而是想要用隐形攻击去让对方伤害对方让对方报复对方，让对方知道自己的情绪。而遭受到这些攻击有些时候会选择压抑在心里，而迟早有一天会在其他地方爆发出来。那天你说：</p>
-<blockquote>
-<p>你要是包红包，你爸妈就包红包，我不包红包，他们就不发。</p>
-</blockquote>
-<p>​        其实我知道你真正的意思，但是我想该做的事我会做的很认真的该准备我都会准备的，我也希望能做一些让你父母开心，可我听到这话就感觉像是像是一种条件，一种金钱交换，一种威胁，我讨厌这种金钱的东西我觉得很世俗。我不开心，我开始对你隐形攻击，我说你父母就知道谈钱，我通过这种方式去表达了我的不开心，触碰到了你敏感的地方。如果你说让我包个红包，让你父母开心下，你父母也再给我包个红包，大家都开心，这样表达是不是更加成熟呢，而我如果好好的向你表达我的情绪我的感受，用另一种方式表达我的不开心，是不是也更加成熟。我想我们都做的不够好，我一直不太会表达我内心的情感，我很少向被人倾述感情，连你也是，<strong>如何用温和的方式相处，我始终做的不够好</strong>。</p>
-<p>​        医生说可能是我从小被父母管教的很严格，习惯性的压抑住自己情绪，故意带刺反抗，习惯用这种方式去发泄自己情绪。我想你也不了解我，你也没有经历过我的经历，我们都无法感同身受，你可能也只是了解你以为的我，就连我好像也才渐渐的去剖析了解自我。</p>
-<p>​        最后医生劝我不要陷入自责的情绪，陷在情绪里，怀疑自己，无法好好思考做好自己。希望如此。</p>
-<h2 id="2021-05-10"><a href="#2021-05-10" class="headerlink" title="2021-05-10"></a>2021-05-10</h2><blockquote>
-<p>是你给我一个梦，不计人生的苦涩。</p>
-<p>是你放我一个人，走过风雨的思念。</p>
-<p>真正想要对你讲，心中无别人。</p>
-<p>——《心中无别人》</p>
-</blockquote>
-<p>我好想你，好想和你聊聊天。哪怕仅仅是通过微信朋友验证。我努力克制着内心的情绪波动，我不想自己显得那么卑微，特别是在你离开之后。我甚至怕打扰到你，让你更加讨厌我。</p>
-<img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210510232752807.png" alt="image-20210510232752807" style="zoom: 33%;" />
-
-<p>今天看到一段话</p>
-<blockquote>
-<p>在一起相互成长总是好的，但是要等一个人长大的代价太大了。</p>
-</blockquote>
-<p>就梦到这里吧。</p>
-<h3 id="End-of-Story-End-of-Her-Story-Begin-of-His-Story"><a href="#End-of-Story-End-of-Her-Story-Begin-of-His-Story" class="headerlink" title="End of Story. End of Her Story. Begin of His Story"></a>End of Story. End of Her Story. Begin of His Story</h3><h2 id="2021-05-12"><a href="#2021-05-12" class="headerlink" title="2021-05-12"></a>2021-05-12</h2><p>我梦见你，你拍了我们曾经买的所有专辑的照片，你对我说你回来了，我开心的醒了过来，梦结束了，你不在了。我不该有这些期待，我知道我不该去想这些，可我偏偏还是会去想，你曾经给了我不该有的期待，不该有的幻想，到现在明知道不该去想，不能去想，可偏偏就，偏偏就还是会去想。</p>
-<p>思念就像海水，溺死在了里面。思念像空气，弥漫在身边，吸进肺里，包裹住身体。我的每一天，每一分钟，也无法轻松。</p>
-]]></content>
-      <categories>
-        <category>memo</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>关于我爱你</tag>
-        <tag>所有的回忆</tag>
       </tags>
   </entry>
   <entry>
@@ -152,6 +93,90 @@
       </categories>
       <tags>
         <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最后的回忆(未完待续)</title>
+    <url>/2021/05/08/memo/memo/</url>
+    <content><![CDATA[<h1 id="pieces-of-memory，pieces-of-my-memory"><a href="#pieces-of-memory，pieces-of-my-memory" class="headerlink" title="pieces of memory，pieces of my memory"></a>pieces of memory，pieces of my memory</h1><p>This place is so empty,<br>My thoughts are so tempting,<br>I don’t know how we got so bad,<br>Sometimes it’s so crazy that nothing could save me,<br>But it’s the only thing that I have,<br>If you believe it’s in my soul,<br>I’d say all the words that I know,<br>Just to see if it would show,<br>that I’m trying to let you know,<br>That I’m better off on my own. </p>
+<p>至少到最后在我心中还有个尚未崩坏的地方，把我所有的回忆隐藏起来。</p>
+<p>怕这些记忆慢慢忘记，这样至少自己能帮自己回忆。</p>
+<a id="more"></a>
+
+<h2 id="2018-05-20"><a href="#2018-05-20" class="headerlink" title="2018-05-20"></a>2018-05-20</h2><p>一切故事的起点。</p>
+<img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210507232527944.png" alt="image-20210507232527944" style="zoom: 25%;" />
+
+<p>单纯的孩子，爬上了殿堂。</p>
+<p>​        那个喧闹而又寂静的夏天，如常一样躲进电子楼。收到你的消息后我在想不会要送我个对象吧，一切美好都在那一刻来的恰到好处，亚当和夏娃闯进了伊甸园偷尝了爱情的禁果，谁也没想到后来的事。但至少在那一天在那一刻我是开心的，神的孩子在伊甸园里跳起了舞。</p>
+<p>​        难过的时候就想去看大海，开心的时候也是如此，所有的开心与不开心都可以抛给大海，海浪声淹没了一切。走到海边，写下了我爱你，写给海那边的你，浪花卷走了所有的情绪，你给的爱像温柔海浪，<strong><em>你是彼粒星，飞过我的天顶。</em></strong></p>
+<img src="https://gitee.com/soloist98/blogimage/raw/master/img/232d26e2fee4277a129fd10e56f64be.jpg" alt="232d26e2fee4277a129fd10e56f64be" style="zoom: 33%;" />
+
+<p>​        喧闹的夜晚，RNG夺冠了，宿舍充满了吵闹声，这一切热闹都与我无关了，对我而言那时候的世界是那么的寂静，寂静到只有我和你两人，我心里的世界只有你，按捺不住的情绪，悄悄躲在了无人的角落，给你打了第一通电话，那是一切故事的开始。</p>
+<h2 id="2021-05-08"><a href="#2021-05-08" class="headerlink" title="2021-05-08"></a>2021-05-08</h2><p>今天约了情感咨询，趁着记忆写点什么。</p>
+<blockquote>
+<p>医生：你有想过如果重新在一起你要怎么变得更好吗？你们要怎样才能更加了解彼此？</p>
+<p>医生：你喜欢她什么？她身上有什么闪光点值得你去喜欢？</p>
+</blockquote>
+<p>这两个问题我犹豫了很久都没有回答上来。</p>
+<p>​         我想的都是我想要复合，每次分手我都竭尽全力想去复合，想的是复合后去好好爱你，但是从来没想明白过要怎么去做才能变更好，才能去更了解你或是让你更了解我，我说我要好好的和你沟通交流，但是说出口后又觉得这是好苍白无力虚无缥缈的方式。</p>
+<p>​         我喜欢你什么呢？相貌？身体？我想说但我又觉得不是这些，我喜欢有你陪伴，我喜欢那些和你一起的美好的回忆，我被爱了我就想好好爱你，我喜欢那些我们真心付出过的感情。医生和朋友都说你更成熟，在感情中给予了我更多的爱，是啊，如医生说的我喜欢的是被爱的感觉，忘了何时我就明白了我喜欢的是被爱的感觉，我当时也明白了其实在这段感情中我应该付出更多的爱，而不是一直要求被爱，可我又全给忘记了，到最后我一直要求你给我买鞋也想要再次感受到被爱。</p>
+<p>​          医生说争吵是无法避免的，但是要通过争吵去变得更好，去更了解对方，我们有不同的人生经历，我们无法感同身受，可是正如你说的我们每次争吵并没有更了解对方，而是通过逃避问题为了那一点快乐，去隐藏了自己。</p>
+<p>​          和医生聊了分手的导火索，她说你是个更加敏感的人，更需要被呵护，更需要我去小心翼翼的相处不要触碰到你最敏感的地方。我们时常拿对方开玩笑打趣，但是这些玩笑都是带了<strong>隐形攻击</strong>的，而没有直接想对方袒露自己的内心情感，而是想要用隐形攻击去让对方伤害对方让对方报复对方，让对方知道自己的情绪。而遭受到这些攻击有些时候会选择压抑在心里，而迟早有一天会在其他地方爆发出来。那天你说：</p>
+<blockquote>
+<p>你要是包红包，你爸妈就包红包，我不包红包，他们就不发。</p>
+</blockquote>
+<p>​        其实我知道你真正的意思，但是我想该做的事我会做的很认真的该准备我都会准备的，我也希望能做一些让你父母开心，可我听到这话就感觉像是像是一种条件，一种金钱交换，一种威胁，我讨厌这种金钱的东西我觉得很世俗。我不开心，我开始对你隐形攻击，我说你父母就知道谈钱，我通过这种方式去表达了我的不开心，触碰到了你敏感的地方。如果你说让我包个红包，让你父母开心下，你父母也再给我包个红包，大家都开心，这样表达是不是更加成熟呢，而我如果好好的向你表达我的情绪我的感受，用另一种方式表达我的不开心，是不是也更加成熟。我想我们都做的不够好，我一直不太会表达我内心的情感，我很少向被人倾述感情，连你也是，<strong>如何用温和的方式相处，我始终做的不够好</strong>。</p>
+<p>​        医生说可能是我从小被父母管教的很严格，习惯性的压抑住自己情绪，故意带刺反抗，习惯用这种方式去发泄自己情绪。我想你也不了解我，你也没有经历过我的经历，我们都无法感同身受，你可能也只是了解你以为的我，就连我好像也才渐渐的去剖析了解自我。</p>
+<p>​        最后医生劝我不要陷入自责的情绪，陷在情绪里，怀疑自己，无法好好思考做好自己。希望如此。</p>
+<h2 id="2021-05-10"><a href="#2021-05-10" class="headerlink" title="2021-05-10"></a>2021-05-10</h2><blockquote>
+<p>是你给我一个梦，不计人生的苦涩。</p>
+<p>是你放我一个人，走过风雨的思念。</p>
+<p>真正想要对你讲，心中无别人。</p>
+<p>——《心中无别人》</p>
+</blockquote>
+<p>我好想你，好想和你聊聊天。哪怕仅仅是通过微信朋友验证。我努力克制着内心的情绪波动，我不想自己显得那么卑微，特别是在你离开之后。我甚至怕打扰到你，让你更加讨厌我。</p>
+<img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210510232752807.png" alt="image-20210510232752807" style="zoom: 33%;" />
+
+<p>今天看到一段话</p>
+<blockquote>
+<p>在一起相互成长总是好的，但是要等一个人长大的代价太大了。</p>
+</blockquote>
+<p>就梦到这里吧。</p>
+<h3 id="End-of-Story-End-of-Her-Story-Begin-of-His-Story"><a href="#End-of-Story-End-of-Her-Story-Begin-of-His-Story" class="headerlink" title="End of Story. End of Her Story. Begin of His Story"></a>End of Story. End of Her Story. Begin of His Story</h3><h2 id="2021-05-12"><a href="#2021-05-12" class="headerlink" title="2021-05-12"></a>2021-05-12</h2><p>我梦见你，你拍了我们曾经买的所有专辑的照片，你对我说你回来了，我开心的醒了过来，梦结束了，你不在了。我不该有这些期待，我知道我不该去想这些，可我偏偏还是会去想，你曾经给了我不该有的期待，不该有的幻想，到现在明知道不该去想，不能去想，可偏偏就，偏偏就还是会去想。</p>
+<p>思念就像海水，溺死在了里面。思念像空气，弥漫在身边，吸进肺里，包裹住身体。我的每一天，每一分钟，也无法轻松。</p>
+<h2 id="2020-05-20"><a href="#2020-05-20" class="headerlink" title="2020-05-20"></a>2020-05-20</h2><h3 id="05-14-1-20"><a href="#05-14-1-20" class="headerlink" title="05-14 1:20"></a>05-14 1:20</h3><p>日子一天一天靠近，渐渐的每个夜晚都变得煎熬，夜长觉少的夜晚，每个连香烟与酒精也无法拯救的夜晚。</p>
+<p>三年前，我说</p>
+<blockquote>
+<p>关于威海的记忆和未来全是你。</p>
+</blockquote>
+<img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210514013442177.png" alt="image-20210514013442177" style="zoom:33%;" />
+
+<p>是的，关于威海所有的记忆都是你，关于威海不会再有未来了。关于过往三年我的记忆全是你，未来不会再是有你的未来了。</p>
+<blockquote>
+<p>关于威海我爱的全是你，</p>
+<p>爱来爱去不明白爱的意义。</p>
+<p>关于威海我想的全是你，</p>
+<p>想来生活无非是痛苦和美丽。</p>
+<p>关于威海我爱的全是你，</p>
+<p>爱到最后，我无路可去。</p>
+</blockquote>
+<p><a href="https://www.bilibili.com/video/BV1QN411o7D3?p=1&share_medium=iphone&share_plat=ios&share_source=WEIXIN&share_tag=s_i&timestamp=1620927623&unique_k=6WK0lQ">关于威海的记忆</a></p>
+<hr>
+<p>还记得18年夏天在江实对面那个深夜，那天吵架，我们要分手了。我们都哭了很久，我装作很轻松的样子，说我累了，我想走了。我总觉得每次吵架其实我也很受委屈，我总是想让你哄下我，我总是付出的不够多却又奢求很多，吵架每个人都很委屈，每个人都会受到伤害，我想你会说既然这样大家何必勉强吧，可是当你同意分手的那一刹那，我真的很绝望，迷茫，恐惧，我不知道没有你会怎样，我慢慢明白我不是一个很social的人，到现在我努力去social依然会觉得好难，哪怕身边会有很多朋友，但仍然会觉得在这个世界上孤独到只有你，我的内心仍然渴望着陪伴，是啊，在天地的夹缝之前，在这个浩瀚的星球上会觉得自己是那么渺小，那么孤独。好幸运的是这五年有你陪伴在我身边，除了我的父母，你是唯一一个。</p>
+<p>那天晚上到最后我给你听了《你离开了南京，再没有人和说话》，到今天依然如此，你离开了我的世界，再没有人和我说话。你走后，我的世界还会好起来吗，是你在我的世界开了天窗，静静的等待下一个人闯进我的世界，还是关上窗，躲在回忆的角落里，我不知道。</p>
+<img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210514020443639.png" alt="image-20210514020443639" style="zoom: 33%;" />
+
+<blockquote>
+<p>532321,165,55365,23162,6653,23165,55365,232161,6653,23165,55365,232,161</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>memo</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>关于我爱你</tag>
+        <tag>所有的回忆</tag>
       </tags>
   </entry>
 </search>

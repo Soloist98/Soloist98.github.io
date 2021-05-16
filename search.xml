@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/11/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>k8s学习</title>
+    <url>/2021/04/05/tool/k8s/</url>
+    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><h2 id="1-1-Pod"><a href="#1-1-Pod" class="headerlink" title="1.1 Pod"></a>1.1 Pod</h2><ol>
+<li>一个pod包含多个容器(sideCar模式)</li>
+<li>Pod控制器——Deployment</li>
+</ol>
+<h2 id="1-2-Name"><a href="#1-2-Name" class="headerlink" title="1.2 Name"></a>1.2 Name</h2><ul>
+<li>name</li>
+<li>namespace</li>
+</ul>
+<h2 id="1-3-Label"><a href="#1-3-Label" class="headerlink" title="1.3 Label"></a>1.3 Label</h2><ul>
+<li>label</li>
+<li>label选择器</li>
+</ul>
+<h2 id="1-4-Service-Ingress"><a href="#1-4-Service-Ingress" class="headerlink" title="1.4 Service Ingress"></a>1.4 Service Ingress</h2><p>问题：Pod ip地址 变化</p>
+<h1 id="2-核心组件"><a href="#2-核心组件" class="headerlink" title="2. 核心组件"></a>2. 核心组件</h1><h2 id="2-1-etcd—配置存储中心"><a href="#2-1-etcd—配置存储中心" class="headerlink" title="2.1 etcd—配置存储中心"></a>2.1 etcd—配置存储中心</h2><h2 id="2-2-主控-master-节点"><a href="#2-2-主控-master-节点" class="headerlink" title="2.2 主控(master)节点"></a>2.2 主控(master)节点</h2><h2 id="2-3-运算-node-节点"><a href="#2-3-运算-node-节点" class="headerlink" title="2.3 运算(node)节点"></a>2.3 运算(node)节点</h2><h2 id="2-4-核心客户端"><a href="#2-4-核心客户端" class="headerlink" title="2.4 核心客户端"></a>2.4 核心客户端</h2>]]></content>
+      <categories>
+        <category>tool</category>
+        <category>k8s</category>
+      </categories>
+      <tags>
+        <tag>k8s</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>java</title>
     <url>/2021/01/29/java/java/</url>
     <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -25,22 +68,32 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/11/29/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>排序算法</title>
+    <url>/2021/04/18/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="1-快排"><a href="#1-快排" class="headerlink" title="1. 快排"></a>1. 快排</h2><p><a href="https://leetcode-cn.com/problems/sort-an-array/">Leet-code-912-排序数组</a></p>
+<p>本文主要参考《算法导论》快排实现方式。</p>
+<ol>
+<li><p>整体框架</p>
+<p>整体思路是<strong>分治+递归</strong>。选出基准值<strong>pivot</strong>，将数组分组基准值左侧小于基准值，右侧大于基准值。将两边分组递归排序。</p>
+<p>代码框架如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (beginIdx &lt; endIdx) &#123;</span><br><span class="line">        <span class="keyword">int</span> pivot = partition(nums, beginIdx, endIdx);</span><br><span class="line">        quickSort(nums, beginIdx, pivot - <span class="number">1</span>);</span><br><span class="line">        quickSort(nums, pivot + <span class="number">1</span>, endIdx);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分组细节</p>
+<p>默认选择最后一个作为基准值。</p>
+<ol>
+<li><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivot = nums[endIdx];</span><br><span class="line">    <span class="keyword">int</span> i = beginIdx - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = beginIdx; j &lt; endIdx; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[j] &lt;= pivot) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">            nums[i] = nums[j];</span><br><span class="line">            nums[j] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    nums[endIdx] = nums[i + <span class="number">1</span>];</span><br><span class="line">    nums[i + <span class="number">1</span>] = pivot;</span><br><span class="line">    <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+</li>
+</ol>
+</li>
+</ol>
 ]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
   </entry>
   <entry>
     <title>最后的回忆(未完待续)</title>
@@ -120,7 +173,17 @@
 <p>我知道我该死心的，可是内心的不甘心又在作祟。我想我已经知道了你走了，爱上了另一个人，你们已经在一起了的答案，可是我的心底还是不愿意承认，没有任何的最终结果，我总是希望能给自己一点渺茫希望。那天我小心翼翼的问你是不是谈恋爱了，我好希望你没有，你的答案是否定。可是那又怎样呢，有些结局改变不了了。</p>
 <p>就像现在，我不死心又能怎么样呢，或是说你告诉了我你谈了恋爱，我难道就能死心放下了吗。我想不是，我只是想知道你怎么样了，我只是突然好想你了，可是没有了你的消息，就像黑夜中苦苦追寻灯塔的舵手。我好想你，我哭的好难受，你走的好彻底，彻底到我在世界上在没有了你的音讯。我好想问问朋友你怎么样了，可是我又做不到。为什么到最后我连你怎么样了都不知道呢。</p>
 <p><strong>这个日记是我的回忆，也是给你的留言，不知道你还看不看得见，如果你还能来这里看看，求求你，和我说说话吧，我好想你。</strong></p>
-<img src="https://img-blog.csdnimg.cn/20210516052516974.png" alt="asd" style="zoom: 25%;" />]]></content>
+<img src="https://img-blog.csdnimg.cn/20210516052516974.png" alt="asd" style="zoom: 25%;" />
+
+<h3 id="05-16-13-20"><a href="#05-16-13-20" class="headerlink" title="05-16 13:20"></a>05-16 13:20</h3><p>two endings two stories.</p>
+<p>给你的简讯和留言说不出万分之一追悔与思念。断了线的风筝却再也得不到回应。</p>
+<center class="half">
+    <img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210516132018950.png" alt="image-20210516132018950" style="zoom:100%;" width="40%" height="500"/>
+    <img src="https://img-blog.csdnimg.cn/20210516132213561.png" alt="mart" style="zoom:100%;" width="40%" />
+</center>
+
+
+]]></content>
       <categories>
         <category>memo</category>
       </categories>
@@ -128,59 +191,6 @@
         <tag>随笔</tag>
         <tag>关于我爱你</tag>
         <tag>所有的回忆</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>k8s学习</title>
-    <url>/2021/04/05/tool/k8s/</url>
-    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><h2 id="1-1-Pod"><a href="#1-1-Pod" class="headerlink" title="1.1 Pod"></a>1.1 Pod</h2><ol>
-<li>一个pod包含多个容器(sideCar模式)</li>
-<li>Pod控制器——Deployment</li>
-</ol>
-<h2 id="1-2-Name"><a href="#1-2-Name" class="headerlink" title="1.2 Name"></a>1.2 Name</h2><ul>
-<li>name</li>
-<li>namespace</li>
-</ul>
-<h2 id="1-3-Label"><a href="#1-3-Label" class="headerlink" title="1.3 Label"></a>1.3 Label</h2><ul>
-<li>label</li>
-<li>label选择器</li>
-</ul>
-<h2 id="1-4-Service-Ingress"><a href="#1-4-Service-Ingress" class="headerlink" title="1.4 Service Ingress"></a>1.4 Service Ingress</h2><p>问题：Pod ip地址 变化</p>
-<h1 id="2-核心组件"><a href="#2-核心组件" class="headerlink" title="2. 核心组件"></a>2. 核心组件</h1><h2 id="2-1-etcd—配置存储中心"><a href="#2-1-etcd—配置存储中心" class="headerlink" title="2.1 etcd—配置存储中心"></a>2.1 etcd—配置存储中心</h2><h2 id="2-2-主控-master-节点"><a href="#2-2-主控-master-节点" class="headerlink" title="2.2 主控(master)节点"></a>2.2 主控(master)节点</h2><h2 id="2-3-运算-node-节点"><a href="#2-3-运算-node-节点" class="headerlink" title="2.3 运算(node)节点"></a>2.3 运算(node)节点</h2><h2 id="2-4-核心客户端"><a href="#2-4-核心客户端" class="headerlink" title="2.4 核心客户端"></a>2.4 核心客户端</h2>]]></content>
-      <categories>
-        <category>tool</category>
-        <category>k8s</category>
-      </categories>
-      <tags>
-        <tag>k8s</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>排序算法</title>
-    <url>/2021/04/18/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="1-快排"><a href="#1-快排" class="headerlink" title="1. 快排"></a>1. 快排</h2><p><a href="https://leetcode-cn.com/problems/sort-an-array/">Leet-code-912-排序数组</a></p>
-<p>本文主要参考《算法导论》快排实现方式。</p>
-<ol>
-<li><p>整体框架</p>
-<p>整体思路是<strong>分治+递归</strong>。选出基准值<strong>pivot</strong>，将数组分组基准值左侧小于基准值，右侧大于基准值。将两边分组递归排序。</p>
-<p>代码框架如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (beginIdx &lt; endIdx) &#123;</span><br><span class="line">        <span class="keyword">int</span> pivot = partition(nums, beginIdx, endIdx);</span><br><span class="line">        quickSort(nums, beginIdx, pivot - <span class="number">1</span>);</span><br><span class="line">        quickSort(nums, pivot + <span class="number">1</span>, endIdx);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分组细节</p>
-<p>默认选择最后一个作为基准值。</p>
-<ol>
-<li><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivot = nums[endIdx];</span><br><span class="line">    <span class="keyword">int</span> i = beginIdx - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = beginIdx; j &lt; endIdx; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[j] &lt;= pivot) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">            nums[i] = nums[j];</span><br><span class="line">            nums[j] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    nums[endIdx] = nums[i + <span class="number">1</span>];</span><br><span class="line">    nums[i + <span class="number">1</span>] = pivot;</span><br><span class="line">    <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
       </tags>
   </entry>
 </search>

@@ -1,6 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/11/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>java</title>
+    <url>/2021/01/29/java/java/</url>
+    <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">B()...</span><br><span class="line">A</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+
+<p>源码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElse</span><span class="params">(T other)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElseGet</span><span class="params">(Supplier&lt;? extends T&gt; other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ofNullable返回值相等</p>
+<ul>
+<li>ofNullable不管是不是null，orElse或者orElseGet一定会调用，B()一定会执行，但是lambda只会在null时才会执行。</li>
+</ul>
+<p>orElse参数是泛型T类型的值，orELseGet则为lambda。</p>
+<p>所以两者null时情形差不多，非null时希望后面执行则orElse，否则orElseGet</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>k8s学习</title>
+    <url>/2021/04/05/tool/k8s/</url>
+    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><h2 id="1-1-Pod"><a href="#1-1-Pod" class="headerlink" title="1.1 Pod"></a>1.1 Pod</h2><ol>
+<li>一个pod包含多个容器(sideCar模式)</li>
+<li>Pod控制器——Deployment</li>
+</ol>
+<h2 id="1-2-Name"><a href="#1-2-Name" class="headerlink" title="1.2 Name"></a>1.2 Name</h2><ul>
+<li>name</li>
+<li>namespace</li>
+</ul>
+<h2 id="1-3-Label"><a href="#1-3-Label" class="headerlink" title="1.3 Label"></a>1.3 Label</h2><ul>
+<li>label</li>
+<li>label选择器</li>
+</ul>
+<h2 id="1-4-Service-Ingress"><a href="#1-4-Service-Ingress" class="headerlink" title="1.4 Service Ingress"></a>1.4 Service Ingress</h2><p>问题：Pod ip地址 变化</p>
+<h1 id="2-核心组件"><a href="#2-核心组件" class="headerlink" title="2. 核心组件"></a>2. 核心组件</h1><h2 id="2-1-etcd—配置存储中心"><a href="#2-1-etcd—配置存储中心" class="headerlink" title="2.1 etcd—配置存储中心"></a>2.1 etcd—配置存储中心</h2><h2 id="2-2-主控-master-节点"><a href="#2-2-主控-master-节点" class="headerlink" title="2.2 主控(master)节点"></a>2.2 主控(master)节点</h2><h2 id="2-3-运算-node-节点"><a href="#2-3-运算-node-节点" class="headerlink" title="2.3 运算(node)节点"></a>2.3 运算(node)节点</h2><h2 id="2-4-核心客户端"><a href="#2-4-核心客户端" class="headerlink" title="2.4 核心客户端"></a>2.4 核心客户端</h2>]]></content>
+      <categories>
+        <category>tool</category>
+        <category>k8s</category>
+      </categories>
+      <tags>
+        <tag>k8s</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>排序算法</title>
+    <url>/2021/04/18/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="1-快排"><a href="#1-快排" class="headerlink" title="1. 快排"></a>1. 快排</h2><p><a href="https://leetcode-cn.com/problems/sort-an-array/">Leet-code-912-排序数组</a></p>
+<p>本文主要参考《算法导论》快排实现方式。</p>
+<ol>
+<li><p>整体框架</p>
+<p>整体思路是<strong>分治+递归</strong>。选出基准值<strong>pivot</strong>，将数组分组基准值左侧小于基准值，右侧大于基准值。将两边分组递归排序。</p>
+<p>代码框架如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (beginIdx &lt; endIdx) &#123;</span><br><span class="line">        <span class="keyword">int</span> pivot = partition(nums, beginIdx, endIdx);</span><br><span class="line">        quickSort(nums, beginIdx, pivot - <span class="number">1</span>);</span><br><span class="line">        quickSort(nums, pivot + <span class="number">1</span>, endIdx);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分组细节</p>
+<p>默认选择最后一个作为基准值。</p>
+<ol>
+<li><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivot = nums[endIdx];</span><br><span class="line">    <span class="keyword">int</span> i = beginIdx - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = beginIdx; j &lt; endIdx; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[j] &lt;= pivot) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">            nums[i] = nums[j];</span><br><span class="line">            nums[j] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    nums[endIdx] = nums[i + <span class="number">1</span>];</span><br><span class="line">    nums[i + <span class="number">1</span>] = pivot;</span><br><span class="line">    <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>最后的回忆(未完待续)</title>
     <url>/2021/05/08/memo/memo/</url>
     <content><![CDATA[<h1 id="pieces-of-memory，pieces-of-my-memory"><a href="#pieces-of-memory，pieces-of-my-memory" class="headerlink" title="pieces of memory，pieces of my memory"></a>pieces of memory，pieces of my memory</h1><p>This place is so empty,<br>My thoughts are so tempting,<br>I don’t know how we got so bad,<br>Sometimes it’s so crazy that nothing could save me,<br>But it’s the only thing that I have,<br>If you believe it’s in my soul,<br>I’d say all the words that I know,<br>Just to see if it would show,<br>that I’m trying to let you know,<br>That I’m better off on my own. </p>
@@ -49,7 +144,7 @@
 <p>就梦到这里吧。</p>
 <h3 id="End-of-Story-End-of-Her-Story-Begin-of-His-Story"><a href="#End-of-Story-End-of-Her-Story-Begin-of-His-Story" class="headerlink" title="End of Story. End of Her Story. Begin of His Story"></a>End of Story. End of Her Story. Begin of His Story</h3><h2 id="2021-05-12"><a href="#2021-05-12" class="headerlink" title="2021-05-12"></a>2021-05-12</h2><p>我梦见你，你拍了我们曾经买的所有专辑的照片，你对我说你回来了，我开心的醒了过来，梦结束了，你不在了。我不该有这些期待，我知道我不该去想这些，可我偏偏还是会去想，你曾经给了我不该有的期待，不该有的幻想，到现在明知道不该去想，不能去想，可偏偏就，偏偏就还是会去想。</p>
 <p>思念就像海水，溺死在了里面。思念像空气，弥漫在身边，吸进肺里，包裹住身体。我的每一天，每一分钟，也无法轻松。</p>
-<h2 id="2020-05-20"><a href="#2020-05-20" class="headerlink" title="2020-05-20"></a>2020-05-20</h2><h3 id="05-14-1-20"><a href="#05-14-1-20" class="headerlink" title="05-14 1:20"></a>05-14 1:20</h3><p>日子一天一天靠近，渐渐的每个夜晚都变得煎熬，夜长觉少的夜晚，每个连香烟与酒精也无法拯救的夜晚。</p>
+<h2 id="2021-05-20"><a href="#2021-05-20" class="headerlink" title="2021-05-20"></a>2021-05-20</h2><h3 id="05-14-1-20"><a href="#05-14-1-20" class="headerlink" title="05-14 1:20"></a>05-14 1:20</h3><p>日子一天一天靠近，渐渐的每个夜晚都变得煎熬，夜长觉少的夜晚，每个连香烟与酒精也无法拯救的夜晚。</p>
 <p>三年前，我说</p>
 <blockquote>
 <p>关于威海的记忆和未来全是你。</p>
@@ -128,6 +223,22 @@
 <p>It’s time time time. It’s time time time that i love.</p>
 <p>It’s time time time. It’s time time time that she slowly leave.</p>
 <p>For CSX.</p>
+<h2 id="2021-05-22"><a href="#2021-05-22" class="headerlink" title="2021-05-22"></a>2021-05-22</h2><h3 id="2-19"><a href="#2-19" class="headerlink" title="2:19"></a>2:19</h3><img src="https://img-blog.csdnimg.cn/20210522022055965.png" alt="shoot" style="zoom:33%;" />
+
+<p>自杀，是自私，是不负责，是绝望，是逃避，是解脱。</p>
+<hr>
+<img src="https://img-blog.csdnimg.cn/20210522022104575.jpg" alt="love" style="zoom: 33%;" />
+
+<p>不是所有人都能走出去，不是时间就能抹平一切，时间让我愈发的想念你。</p>
+<p>忘不掉，走不出去，带着破碎的心，这就是我的人生，这就是我后半生要走的路。</p>
+<p>像影子陷入黑夜一样陷入在过往里。</p>
+<blockquote>
+<p>I can’t beat it.  I can’t beat it.</p>
+</blockquote>
+<hr>
+<p>明明你走了，删掉了联系方式，不再在乎我怎么样了，</p>
+<p>可是我还在每个深夜想你，想你怎么样了，哭的死去活来。</p>
+<p>还是那么下贱。</p>
 ]]></content>
       <categories>
         <category>memo</category>
@@ -136,101 +247,6 @@
         <tag>随笔</tag>
         <tag>关于我爱你</tag>
         <tag>所有的回忆</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java</title>
-    <url>/2021/01/29/java/java/</url>
-    <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">B()...</span><br><span class="line">A</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-
-<p>源码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElse</span><span class="params">(T other)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElseGet</span><span class="params">(Supplier&lt;? extends T&gt; other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>ofNullable返回值相等</p>
-<ul>
-<li>ofNullable不管是不是null，orElse或者orElseGet一定会调用，B()一定会执行，但是lambda只会在null时才会执行。</li>
-</ul>
-<p>orElse参数是泛型T类型的值，orELseGet则为lambda。</p>
-<p>所以两者null时情形差不多，非null时希望后面执行则orElse，否则orElseGet</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/11/29/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>k8s学习</title>
-    <url>/2021/04/05/tool/k8s/</url>
-    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><h2 id="1-1-Pod"><a href="#1-1-Pod" class="headerlink" title="1.1 Pod"></a>1.1 Pod</h2><ol>
-<li>一个pod包含多个容器(sideCar模式)</li>
-<li>Pod控制器——Deployment</li>
-</ol>
-<h2 id="1-2-Name"><a href="#1-2-Name" class="headerlink" title="1.2 Name"></a>1.2 Name</h2><ul>
-<li>name</li>
-<li>namespace</li>
-</ul>
-<h2 id="1-3-Label"><a href="#1-3-Label" class="headerlink" title="1.3 Label"></a>1.3 Label</h2><ul>
-<li>label</li>
-<li>label选择器</li>
-</ul>
-<h2 id="1-4-Service-Ingress"><a href="#1-4-Service-Ingress" class="headerlink" title="1.4 Service Ingress"></a>1.4 Service Ingress</h2><p>问题：Pod ip地址 变化</p>
-<h1 id="2-核心组件"><a href="#2-核心组件" class="headerlink" title="2. 核心组件"></a>2. 核心组件</h1><h2 id="2-1-etcd—配置存储中心"><a href="#2-1-etcd—配置存储中心" class="headerlink" title="2.1 etcd—配置存储中心"></a>2.1 etcd—配置存储中心</h2><h2 id="2-2-主控-master-节点"><a href="#2-2-主控-master-节点" class="headerlink" title="2.2 主控(master)节点"></a>2.2 主控(master)节点</h2><h2 id="2-3-运算-node-节点"><a href="#2-3-运算-node-节点" class="headerlink" title="2.3 运算(node)节点"></a>2.3 运算(node)节点</h2><h2 id="2-4-核心客户端"><a href="#2-4-核心客户端" class="headerlink" title="2.4 核心客户端"></a>2.4 核心客户端</h2>]]></content>
-      <categories>
-        <category>tool</category>
-        <category>k8s</category>
-      </categories>
-      <tags>
-        <tag>k8s</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>排序算法</title>
-    <url>/2021/04/18/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="1-快排"><a href="#1-快排" class="headerlink" title="1. 快排"></a>1. 快排</h2><p><a href="https://leetcode-cn.com/problems/sort-an-array/">Leet-code-912-排序数组</a></p>
-<p>本文主要参考《算法导论》快排实现方式。</p>
-<ol>
-<li><p>整体框架</p>
-<p>整体思路是<strong>分治+递归</strong>。选出基准值<strong>pivot</strong>，将数组分组基准值左侧小于基准值，右侧大于基准值。将两边分组递归排序。</p>
-<p>代码框架如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (beginIdx &lt; endIdx) &#123;</span><br><span class="line">        <span class="keyword">int</span> pivot = partition(nums, beginIdx, endIdx);</span><br><span class="line">        quickSort(nums, beginIdx, pivot - <span class="number">1</span>);</span><br><span class="line">        quickSort(nums, pivot + <span class="number">1</span>, endIdx);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分组细节</p>
-<p>默认选择最后一个作为基准值。</p>
-<ol>
-<li><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> beginIdx, <span class="keyword">int</span> endIdx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivot = nums[endIdx];</span><br><span class="line">    <span class="keyword">int</span> i = beginIdx - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = beginIdx; j &lt; endIdx; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[j] &lt;= pivot) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">            nums[i] = nums[j];</span><br><span class="line">            nums[j] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    nums[endIdx] = nums[i + <span class="number">1</span>];</span><br><span class="line">    nums[i + <span class="number">1</span>] = pivot;</span><br><span class="line">    <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
       </tags>
   </entry>
 </search>

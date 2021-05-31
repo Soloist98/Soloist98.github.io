@@ -19,6 +19,26 @@
 ]]></content>
   </entry>
   <entry>
+    <title>随心所欲</title>
+    <url>/2021/05/08/memo/memo/</url>
+    <content><![CDATA[<h1 id="finally"><a href="#finally" class="headerlink" title="finally"></a>finally</h1><p>三年的感情喂条狗都不会这样吧，</p>
+<p>三年的每一天越想越觉得恶心。</p>
+<p>瞎了狗眼了。</p>
+<p>没有你现在我真的好开心。</p>
+<p>笑死了，你可真是个好前女友呢，好前女友做给谁看呢笑死。</p>
+<p>原来我才发现我不是唯一一个视奸怪呢，不过微博经常访问记录没办法删呢，呜呜，今天又像以前一样下贱点了进去呢~ 以后不会了呢。希望你也别来视奸了哦，这里是我的情绪的垃圾堆，别臭到你了呢。</p>
+<p>顺便提一嘴，我从来没有给任何人说过你的一句不好哦，我都是拼了命维护你，以后也不会。你要怎样你随便，反正我都无所谓了，和你的小姐妹说说我这不好那不好，我们csx最棒了呢！反正你一直挺擅长的。</p>
+<p>听郑敬儒唱巫赌的一瞬间一切都如释重负了，这种感觉真好。</p>
+<h2 id="2021-05-27"><a href="#2021-05-27" class="headerlink" title="2021-05-27"></a>2021-05-27</h2><h3 id="刘西安离职有感"><a href="#刘西安离职有感" class="headerlink" title="刘西安离职有感"></a>刘西安离职有感</h3><p>权利与利益不是自上而下施舍的，而是从下向上呐喊反抗斗争而来的。反抗是要流血的，刘兄倒在了这条路上，在斗争的路上牺牲了自己的利益，换来了每个人应得的权利。在压迫中每个人都沉默隐忍着，怕牺牲更多自己的利益，刘兄舍生取义，杀身成仁，敬佩刘兄。遥祝刘兄未来一帆风顺。</p>
+]]></content>
+      <categories>
+        <category>memo</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>java</title>
     <url>/2021/01/29/java/java/</url>
     <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -58,22 +78,6 @@
       </categories>
       <tags>
         <tag>岗位</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随心所欲</title>
-    <url>/2021/05/08/memo/memo/</url>
-    <content><![CDATA[<h1 id="finally"><a href="#finally" class="headerlink" title="finally"></a>finally</h1><p>三年的感情喂条狗都不会这样吧，</p>
-<p>三年的每一天越想越觉得恶心。</p>
-<p>瞎了狗眼了。</p>
-<p>没有你现在我真的好开心。</p>
-<h2 id="2021-05-27"><a href="#2021-05-27" class="headerlink" title="2021-05-27"></a>2021-05-27</h2><h3 id="刘西安离职有感"><a href="#刘西安离职有感" class="headerlink" title="刘西安离职有感"></a>刘西安离职有感</h3><p>权利与利益不是自上而下施舍的，而是从下向上呐喊反抗斗争而来的。反抗是要流血的，刘兄倒在了这条路上，在斗争的路上牺牲了自己的利益，换来了每个人应得的权利。在压迫中每个人都沉默隐忍着，怕牺牲更多自己的利益，刘兄舍生取义，杀身成仁，敬佩刘兄。遥祝刘兄未来一帆风顺。</p>
-]]></content>
-      <categories>
-        <category>memo</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>

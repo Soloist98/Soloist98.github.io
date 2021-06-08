@@ -43,6 +43,18 @@
       </tags>
   </entry>
   <entry>
+    <title>随心所欲</title>
+    <url>/2021/05/08/memo/memo/</url>
+    <content><![CDATA[<h2 id="2021-05-27"><a href="#2021-05-27" class="headerlink" title="2021-05-27"></a>2021-05-27</h2><h3 id="刘西安离职有感"><a href="#刘西安离职有感" class="headerlink" title="刘西安离职有感"></a>刘西安离职有感</h3><p>权利与利益不是自上而下施舍的，而是从下向上呐喊反抗斗争而来的。反抗是要流血的，刘兄倒在了这条路上，在斗争的路上牺牲了自己的利益，换来了每个人应得的权利。在压迫中每个人都沉默隐忍着，怕牺牲更多自己的利益，刘兄舍生取义，杀身成仁，敬佩刘兄。遥祝刘兄未来一帆风顺。</p>
+]]></content>
+      <categories>
+        <category>memo</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>job</title>
     <url>/2021/05/24/job/job/</url>
     <content><![CDATA[<h1 id="成都岗位大盘鸡"><a href="#成都岗位大盘鸡" class="headerlink" title="成都岗位大盘鸡"></a>成都岗位大盘鸡</h1><ol>
@@ -96,9 +108,11 @@
 </tbody></table>
 </li>
 </ol>
-<h2 id="2-三次握手与四次挥手"><a href="#2-三次握手与四次挥手" class="headerlink" title="2. 三次握手与四次挥手"></a>2. 三次握手与四次挥手</h2><h3 id="2-1-三次握手"><a href="#2-1-三次握手" class="headerlink" title="2.1 三次握手"></a>2.1 三次握手</h3><p>TCP的连接建立</p>
-<p><img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210609004153365.png" alt="image-20210609004153365"></p>
-]]></content>
+<h2 id="2-三次握手与四次挥手"><a href="#2-三次握手与四次挥手" class="headerlink" title="2. 三次握手与四次挥手"></a>2. 三次握手与四次挥手</h2><p>先大致理解TCP报文段格式</p>
+<img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210609004713695.png" alt="image-20210609004713695" style="zoom:80%;" />
+
+<h3 id="2-1-三次握手"><a href="#2-1-三次握手" class="headerlink" title="2.1 三次握手"></a>2.1 三次握手</h3><p>TCP的连接建立</p>
+<img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210609004153365.png" alt="image-20210609004153365" style="zoom:80%;" />]]></content>
       <categories>
         <category>job</category>
       </categories>
@@ -129,18 +143,6 @@
       </categories>
       <tags>
         <tag>k8s</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随心所欲</title>
-    <url>/2021/05/08/memo/memo/</url>
-    <content><![CDATA[<h2 id="2021-05-27"><a href="#2021-05-27" class="headerlink" title="2021-05-27"></a>2021-05-27</h2><h3 id="刘西安离职有感"><a href="#刘西安离职有感" class="headerlink" title="刘西安离职有感"></a>刘西安离职有感</h3><p>权利与利益不是自上而下施舍的，而是从下向上呐喊反抗斗争而来的。反抗是要流血的，刘兄倒在了这条路上，在斗争的路上牺牲了自己的利益，换来了每个人应得的权利。在压迫中每个人都沉默隐忍着，怕牺牲更多自己的利益，刘兄舍生取义，杀身成仁，敬佩刘兄。遥祝刘兄未来一帆风顺。</p>
-]]></content>
-      <categories>
-        <category>memo</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>

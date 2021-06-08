@@ -43,6 +43,70 @@
       </tags>
   </entry>
   <entry>
+    <title>job</title>
+    <url>/2021/05/24/job/job/</url>
+    <content><![CDATA[<h1 id="成都岗位大盘鸡"><a href="#成都岗位大盘鸡" class="headerlink" title="成都岗位大盘鸡"></a>成都岗位大盘鸡</h1><ol>
+<li><p>[成都][15K-20K] ThoughtWorks Java 后端、前端[一天面试完，一天拿 offer]</p>
+<p><a href="https://www.v2ex.com/t/778838#reply2">链接</a></p>
+</li>
+<li><p>研发协同服务域 ROMAFactory-ROMAAPI 宋德志</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>job</category>
+      </categories>
+      <tags>
+        <tag>岗位</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>八股文</title>
+    <url>/2021/06/09/job/%E5%85%AB%E8%82%A1%E6%96%87/</url>
+    <content><![CDATA[<h1 id="八股文"><a href="#八股文" class="headerlink" title="八股文"></a>八股文</h1><p>整理了很多次，文字版重新总结一次，一次整理，面试受用。</p>
+<h1 id="计网"><a href="#计网" class="headerlink" title="计网"></a>计网</h1><h2 id="1-分层"><a href="#1-分层" class="headerlink" title="1. 分层"></a>1. 分层</h2><img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210609001735322.png" alt="image-20210609001735322" style="zoom: 80%;" />
+
+<ol>
+<li>OSI —&gt; 7层 —&gt; 复杂，不实用</li>
+<li>TCP/IP —&gt; 4层 —&gt; 实际上三层有用，网络接口层没有实质内容</li>
+</ol>
+<p>综述一般使用<strong>五层模型</strong>。</p>
+<h3 id="问题1-简要介绍下各层的作用"><a href="#问题1-简要介绍下各层的作用" class="headerlink" title="问题1. 简要介绍下各层的作用"></a>问题1. 简要介绍下各层的作用</h3><p><em>TODO</em></p>
+<ol>
+<li><p>运输层</p>
+<table>
+<thead>
+<tr>
+<th align="center">TCP</th>
+<th align="center">UDP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">面向连接</td>
+<td align="center">无连接</td>
+</tr>
+<tr>
+<td align="center">可靠</td>
+<td align="center">不可靠，尽最大努力传输（best effort）</td>
+</tr>
+<tr>
+<td align="center"><strong>报文段segment</strong></td>
+<td align="center">用户数据报</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h2 id="2-三次握手与四次挥手"><a href="#2-三次握手与四次挥手" class="headerlink" title="2. 三次握手与四次挥手"></a>2. 三次握手与四次挥手</h2><h3 id="2-1-三次握手"><a href="#2-1-三次握手" class="headerlink" title="2.1 三次握手"></a>2.1 三次握手</h3><p>TCP的连接建立</p>
+<p><img src="https://gitee.com/soloist98/blogimage/raw/master/img/image-20210609004153365.png" alt="image-20210609004153365"></p>
+]]></content>
+      <categories>
+        <category>job</category>
+      </categories>
+      <tags>
+        <tag>八股文</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>k8s学习</title>
     <url>/2021/04/05/tool/k8s/</url>
     <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><h2 id="1-1-Pod"><a href="#1-1-Pod" class="headerlink" title="1.1 Pod"></a>1.1 Pod</h2><ol>
@@ -65,24 +129,6 @@
       </categories>
       <tags>
         <tag>k8s</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>job</title>
-    <url>/2021/05/24/memo/job/</url>
-    <content><![CDATA[<h1 id="成都岗位大盘鸡"><a href="#成都岗位大盘鸡" class="headerlink" title="成都岗位大盘鸡"></a>成都岗位大盘鸡</h1><ol>
-<li><p>[成都][15K-20K] ThoughtWorks Java 后端、前端[一天面试完，一天拿 offer]</p>
-<p><a href="https://www.v2ex.com/t/778838#reply2">链接</a></p>
-</li>
-<li><p>研发协同服务域 ROMAFactory-ROMAAPI 宋德志</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>memo</category>
-      </categories>
-      <tags>
-        <tag>岗位</tag>
       </tags>
   </entry>
   <entry>

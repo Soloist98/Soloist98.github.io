@@ -19,6 +19,48 @@
 ]]></content>
   </entry>
   <entry>
+    <title>java</title>
+    <url>/2021/01/29/java/java/</url>
+    <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">B()...</span><br><span class="line">A</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+
+<p>源码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElse</span><span class="params">(T other)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElseGet</span><span class="params">(Supplier&lt;? extends T&gt; other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ofNullable返回值相等</p>
+<ul>
+<li>ofNullable不管是不是null，orElse或者orElseGet一定会调用，B()一定会执行，但是lambda只会在null时才会执行。</li>
+</ul>
+<p>orElse参数是泛型T类型的值，orELseGet则为lambda。</p>
+<p>所以两者null时情形差不多，非null时希望后面执行则orElse，否则orElseGet</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>job</title>
+    <url>/2021/05/24/job/job/</url>
+    <content><![CDATA[<h1 id="成都岗位大盘鸡"><a href="#成都岗位大盘鸡" class="headerlink" title="成都岗位大盘鸡"></a>成都岗位大盘鸡</h1><ol>
+<li><p>[成都][15K-20K] ThoughtWorks Java 后端、前端[一天面试完，一天拿 offer]</p>
+<p><a href="https://www.v2ex.com/t/778838#reply2">链接</a></p>
+</li>
+<li><p>研发协同服务域 ROMAFactory-ROMAAPI 宋德志</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>job</category>
+      </categories>
+      <tags>
+        <tag>岗位</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>八股文</title>
     <url>/2021/06/09/job/%E5%85%AB%E8%82%A1%E6%96%87/</url>
     <content><![CDATA[<h1 id="八股文"><a href="#八股文" class="headerlink" title="八股文"></a>八股文</h1><p>整理了很多次，文字版重新总结一次，一次整理，面试受用。</p>
@@ -76,45 +118,15 @@
       </tags>
   </entry>
   <entry>
-    <title>java</title>
-    <url>/2021/01/29/java/java/</url>
-    <content><![CDATA[<h1 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;B()...&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;B&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">final</span> String... args)</span> </span>&#123;</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElse(B()));</span><br><span class="line">    System.out.println(Optional.ofNullable(<span class="string">&quot;A&quot;</span>).orElseGet(() -&gt; B()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">B()...</span><br><span class="line">A</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
-
-<p>源码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElse</span><span class="params">(T other)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">orElseGet</span><span class="params">(Supplier&lt;? extends T&gt; other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value != <span class="keyword">null</span> ? value : other.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>ofNullable返回值相等</p>
-<ul>
-<li>ofNullable不管是不是null，orElse或者orElseGet一定会调用，B()一定会执行，但是lambda只会在null时才会执行。</li>
-</ul>
-<p>orElse参数是泛型T类型的值，orELseGet则为lambda。</p>
-<p>所以两者null时情形差不多，非null时希望后面执行则orElse，否则orElseGet</p>
-]]></content>
+    <title>DON&#39;T LOOK BACK IN ANGER</title>
+    <url>/2021/05/08/memo/memo/</url>
+    <content><![CDATA[<h2 id="2021-05-27"><a href="#2021-05-27" class="headerlink" title="2021-05-27"></a>2021-05-27</h2><h3 id="刘西安离职有感"><a href="#刘西安离职有感" class="headerlink" title="刘西安离职有感"></a>刘西安离职有感</h3><p>权利与利益不是自上而下施舍的，而是从下向上呐喊反抗斗争而来的。反抗是要流血的，刘兄倒在了这条路上，在斗争的路上牺牲了自己的利益，换来了每个人应得的权利。在压迫中每个人都沉默隐忍着，怕牺牲更多自己的利益，刘兄舍生取义，杀身成仁，敬佩刘兄。遥祝刘兄未来一帆风顺。</p>
+<h2 id="2021-06-13"><a href="#2021-06-13" class="headerlink" title="2021-06-13"></a>2021-06-13</h2><iframe height="500" weight="500" src="//player.bilibili.com/player.html?aid=81844550&bvid=BV1JJ411j7qx&cid=139824654&page=1" allowfullscreen="true"></iframe>]]></content>
       <categories>
-        <category>java</category>
+        <category>memo</category>
       </categories>
       <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>job</title>
-    <url>/2021/05/24/job/job/</url>
-    <content><![CDATA[<h1 id="成都岗位大盘鸡"><a href="#成都岗位大盘鸡" class="headerlink" title="成都岗位大盘鸡"></a>成都岗位大盘鸡</h1><ol>
-<li><p>[成都][15K-20K] ThoughtWorks Java 后端、前端[一天面试完，一天拿 offer]</p>
-<p><a href="https://www.v2ex.com/t/778838#reply2">链接</a></p>
-</li>
-<li><p>研发协同服务域 ROMAFactory-ROMAAPI 宋德志</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>job</category>
-      </categories>
-      <tags>
-        <tag>岗位</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -168,18 +180,6 @@
       </categories>
       <tags>
         <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随心所欲</title>
-    <url>/2021/05/08/memo/memo/</url>
-    <content><![CDATA[<h2 id="2021-05-27"><a href="#2021-05-27" class="headerlink" title="2021-05-27"></a>2021-05-27</h2><h3 id="刘西安离职有感"><a href="#刘西安离职有感" class="headerlink" title="刘西安离职有感"></a>刘西安离职有感</h3><p>权利与利益不是自上而下施舍的，而是从下向上呐喊反抗斗争而来的。反抗是要流血的，刘兄倒在了这条路上，在斗争的路上牺牲了自己的利益，换来了每个人应得的权利。在压迫中每个人都沉默隐忍着，怕牺牲更多自己的利益，刘兄舍生取义，杀身成仁，敬佩刘兄。遥祝刘兄未来一帆风顺。</p>
-<h2 id="2021-06-13"><a href="#2021-06-13" class="headerlink" title="2021-06-13"></a>2021-06-13</h2><iframe height="500" weight="500" src="//player.bilibili.com/player.html?aid=81844550&bvid=BV1JJ411j7qx&cid=139824654&page=1" allowfullscreen="true"></iframe>]]></content>
-      <categories>
-        <category>memo</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
 </search>
